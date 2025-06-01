@@ -7,6 +7,23 @@
   pointer-events: none;
 }
 
+.file-button-style {
+  background-color: #61dafb;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.center-wrapper {
+  display: flex;
+  justify-content: center; /* center on x-axis */
+  align-items: center;     /* center on y-axis */
+  height: 100vh;           /* take up full screen height */
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

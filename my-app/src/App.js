@@ -1,26 +1,27 @@
-import React from 'react';
+// my-app/src/App.js
+import React, { useState } from 'react';
 import './App.css';
+import HistoryPanel from './Components/HistoryPanel'; 
+import UploadFile from './Components/UploadFile';
 
 function App() {
-  const handleFileChange = (event) => {
-    const file = event.target.files[0];
-    if (file) {
-      console.log('File selected:', file.name);
-      alert(`Selected file: ${file.name}`);
-    }
+  const [fileCount, setFileCount] = useState(0); // Track file selections
+
+  const handleFileSelected = () => {
+    setFileCount(fileCount + 1); // Increment count
   };
 
   return (
     <div className="App">
-      <input
-        type="file"
-        id="fileInput"
-        style={{ display: 'none' }}
-        onChange={handleFileChange}
-      />
-      <button onClick={() => document.getElementById('fileInput').click()}>
-        Upload File
-      </button>
+      <div className="App-banner">
+        <h1>Sentiment Analyzer</h1>
+      </div>
+      <div className="App-content">
+        < UploadFile onFileSelected={handleFileSelected}/>
+        <div className="history-panel">
+          <HistoryPanel fileCount={fileCount}/>
+        </div>
+      </div>
     </div>
   );
 }

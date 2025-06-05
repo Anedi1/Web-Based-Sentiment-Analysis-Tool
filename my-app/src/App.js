@@ -4,6 +4,7 @@ import './App.css';
 import HistoryPanel from './Components/HistoryPanel'; 
 import UploadFile from './Components/UploadFile';
 
+// Main functional component of the app
 function App() {
   const [fileCount, setFileCount] = useState(0); // Track file selections
 

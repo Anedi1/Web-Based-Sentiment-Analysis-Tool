@@ -6,16 +6,27 @@
 .App-banner {
   background-color: #4682b4; /* Medium blue */
   color: white;
-  padding: 20px;
+  padding: 10px 0;
   width: 100%;
   position: fixed; /* Stays at the top */
+  display: flex; /* Enable flexbox */
+  flex-direction: column; /* Stack h1 and TabNav vertically */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
   top: 0;
   left: 0;
   z-index: 10; /* Ensures it’s above other content */
+  height: 90px;
+  gap: 15px;
+}
+
+.App-banner h1 {
+  margin: 0; /* Remove default margins */
+  font-size: 24px; /* Balanced size */
 }
 
 .App-content {
-  margin-top:120px; /* Space for the fixed banner */
+  margin-top:140px; /* Space for the fixed banner */
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -25,7 +36,7 @@
 
 .history-panel {
   background-color: #f0f0f0; /* Light gray background */
-  padding: 15px;
+  padding: 5px;
   border-radius: 8px;
   width:60%;
   max-width: 400px; /* Limit width for readability */
@@ -46,18 +57,22 @@
   background-color: #5a9bd4; /* Lighter blue on hover */
 }
 
-/* Remove old, unused styles */
-.App-logo {
-  display: none; /* Hide logo since it’s not used */
+.tabs button {
+  background-color: #8d9398;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+  margin: 0 5px;
 }
 
-.App-header {
-  display: none; /* Hide old header */
+.tabs button:hover {
+  background-color: #888a8b; /* Lighter blue on hover */
 }
 
-.App-link {
-  color: #61dafb;
-}
 
 @keyframes App-logo-spin {
   from {

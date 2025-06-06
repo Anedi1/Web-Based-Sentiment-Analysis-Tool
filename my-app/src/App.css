@@ -46,18 +46,6 @@
   background-color: #5a9bd4; /* Lighter blue on hover */
 }
 
-/* Remove old, unused styles */
-.App-logo {
-  display: none; /* Hide logo since it’s not used */
-}
-
-.App-header {
-  display: none; /* Hide old header */
-}
-
-.App-link {
-  color: #61dafb;
-}
 
 @keyframes App-logo-spin {
   from {

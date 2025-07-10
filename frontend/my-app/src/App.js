@@ -7,11 +7,11 @@ import TabNav from './Components/TabNav';
 
 // Main functional component of the app
 function App() {
-  const [fileCount, setFileCount] = useState(0); // Track file selections
+  const [files, setFiles] = useState([]); // Track file selections
   const [activeTab, setActiveTab] = useState('main');
 
-  const handleFileSelected = () => {
-    setFileCount(fileCount + 1); // Increment count
+  const handleFileSelected = (fileName) => {
+    setFiles([...files, fileName]); // Increment count
   };
 
   return (
@@ -27,7 +27,7 @@ function App() {
           </div> 
         ) : ( 
           <div className="history-panel">
-            <HistoryPanel fileCount={fileCount}/>
+            <HistoryPanel files={files}/>
           </div>
         )} 
       </div>

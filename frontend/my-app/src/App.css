@@ -15,58 +15,68 @@
   align-items: center; /* Center vertically */
   top: 0;
   left: 0;
-  z-index: 10; /* Ensures it’s above other content */
+  z-index: 15; /* Ensures it’s above other content */
   height: 90px;
   gap: 15px;
 }
 
 .App-banner h1 {
-  margin: 0; /* Remove default margins */
+  margin: 0 20px; /* Remove default margins */
   font-size: 24px; /* Balanced size */
 }
 
 .App-content {
-  margin-top:140px; /* Space for the fixed banner */
+  margin-top:110px; /* Space for the fixed banner */
   padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 30px; /* Space between elements */
+  min-height: calc(100vh - 80px);
 }
 
 .history-panel {
   background-color: #f0f0f0; /* Light gray background */
-  padding: 5px;
+  padding: 20px;
   border-radius: 8px;
-  width:60%;
-  max-width: 400px; /* Limit width for readability */
+  width:90%;
+  max-width: 600px; /* Limit width for readability */
+  margin: 0 auto;
+  text-align: center;
 }
 
-/* Upload Button start */
-.upload-button {
-  background-color: #4682b4; /* Match banner color */
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+.file-name-list {
+  margin-top: 20px;
+}
+
+.file-name-list h4 {
+  margin: 20px 5 5px;
   font-size: 16px;
-  transition: background-color 0.3s;
 }
 
-.upload-button:hover {
-  background-color: #5a9bd4; /* Lighter blue on hover */
+.file-name-list ul {
+  list-style-type: disc;
+  font-family: 'Courier New', monospace;
+  margin: 5px 0;
+  padding-left: 15px;
+  width: 100%;
+  text-align: left;
+  list-style-position: outside;
 }
-.file-name {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  margin-top: 16px;
-  font-size: 15px;
-  color: #333;
-  gap: 8px;
-  flex-wrap: wrap;
+
+.file-name-list p {
+  color: #665;
+  font-style: italic;
+}
+
+.file-item {
+  font-size: 13px; /* Reduced from default (16px) */
+  line-height: 1.4; /* Improved readability */
+  transition: color 0.3s;
+}
+
+.file-item:hover {
+  color: #5a9bd4;
 }
 
 .file-label {
@@ -81,6 +91,7 @@
   word-break: break-word;
   max-width: 90vw;
 }
+
 .preview-section {
   display: flex;
   flex-direction: column;
@@ -96,6 +107,7 @@
   border: 1px solid #ccc;
   border-radius: 8px;
 }
+
 .preview-section h3 {
   margin: 0;
   font-size: 18px;
@@ -108,6 +120,30 @@
   height: 400px;
   border: 1px solid #ccc;
   border-radius: 8px;
+}
+
+/* Upload Button start */
+
+.upload-button {
+  background-color: #4682b4; /* Match banner color */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.upload-button:hover {
+  background-color: #5a9bd4; /* Lighter blue on hover */
+}
+
+.upload-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
 }
 
 /* Upload Button end */
